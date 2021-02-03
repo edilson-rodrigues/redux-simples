@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
-export const AppStyle = styled.div`
+const AppStyle = styled.div`
 display: flex;
 flex-direction: column;
-align-items: center;
+text-align: center;
 `
 
-export const TitleApp = styled.h1`
+AppStyle.Title = styled.h1`
 font-weight: 200;
 `
 
-export const FlexRow = styled.div`
+AppStyle.Row = styled.div`
 display: flex;
 `
+
+export default AppStyle;
