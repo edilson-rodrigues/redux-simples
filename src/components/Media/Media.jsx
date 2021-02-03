@@ -10,13 +10,17 @@ const card_color = {
 	purple: "purple",
 };
 
-const Media = () => (
-	<Card title="Media dos Números" color={card_color.green}>
-		<span>
-			<span>Resultado</span>
-			<ComponentStyle.Strong>5</ComponentStyle.Strong>
-		</span>
-	</Card>
-);
+const Media = (props) => {
+	const { min, max } = props;
+
+	return (
+		<Card title="Media dos Números" color={card_color.green}>
+			<span>
+				<span>Resultado</span>
+				<ComponentStyle.Strong>{(max + min) / 2}</ComponentStyle.Strong>
+			</span>
+		</Card>
+	);
+};
 
 export default Media;

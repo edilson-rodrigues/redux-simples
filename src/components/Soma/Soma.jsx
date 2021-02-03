@@ -10,13 +10,14 @@ const card_color = {
 	purple: "purple",
 };
 
-const Soma = () => (
+const Soma = (props) => {
+	const { min, max } = props;
 	<Card title="Soma dos Números" color={card_color.blue}>
 		<span>
 			<span>Resultado</span>
-			<ComponentStyle.Strong>10</ComponentStyle.Strong>
+			<ComponentStyle.Strong>{min + max}</ComponentStyle.Strong>
 		</span>
-	</Card>
-);
+	</Card>;
+};
 
 export default Soma;
