@@ -10,13 +10,18 @@ const card_color = {
 	purple: "purple",
 };
 
-const Sorteio = () => (
-	<Card title="Sorteio de um Número" color={card_color.purple}>
-		<span>
-			<span>Resultado</span>
-			<ComponentStyle.Strong>10</ComponentStyle.Strong>
-		</span>
-	</Card>
-);
+const Sorteio = (props) => {
+	const { min, max } = props;
+	const aleatorio = parseInt(Math.random() * (max - min)) + min;
+
+	return (
+		<Card title="Sorteio de um Número" color={card_color.purple}>
+			<span>
+				<span>Resultado</span>
+				<ComponentStyle.Strong>{aleatorio}</ComponentStyle.Strong>
+			</span>
+		</Card>
+	);
+};
 
 export default Sorteio;

@@ -18,7 +18,12 @@ const App = () => {
         Exercício React-Redux (Simples)
     </AppStyle.Title>
       <AppStyle.Row>
-        <Intervalo />
+        <Intervalo
+          min={min}
+          max={max}
+          onMinChange={setMin}
+          onMaxChange={setMax}
+        />
       </AppStyle.Row>
       <AppStyle.Row>
         <Media min={min} max={max} />
