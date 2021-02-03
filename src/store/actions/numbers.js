@@ -5,3 +5,10 @@ export const actionChangeNumberMin = (newNumber) => {
         payload: newNumber,
     }
 }
+
+export const actionChangeNumberMax = (newNumber) => {
+    return {
+        type: 'NUM_MAX_CHANGE',
+        payload: newNumber,
+    }
+}

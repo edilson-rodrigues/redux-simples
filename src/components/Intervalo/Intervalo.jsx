@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 
 import ComponentStyle from "../Style";
 import Card from "../Card";
-import {actionChangeNumberMin} from "../../store/actions/numbers";
+import {actionChangeNumberMax, actionChangeNumberMin} from "../../store/actions/numbers";
 
 const card_color = {
     red: "red",
@@ -14,21 +14,28 @@ const card_color = {
 
 const Intervalo = (props) => {
     const {min, max} = props;
-    const {changeNumberMin} = props;
-
-    changeNumberMin(1000);
-
+    const {changeNumberMin, changeNumberMax} = props;
 
     return (
         <Card title="Intervalo de Números" color={card_color.red}>
 			<span>
 				<ComponentStyle.Strong>
 					Min
-					<ComponentStyle.Input type="number" name="number" id="" value={min} readOnly/>
+					<ComponentStyle.Input
+                        type="number"
+                        name="number-min"
+                        id="" value={min}
+                        onChange={e => changeNumberMin(+e.target.value)}
+                    />
 				</ComponentStyle.Strong>
 				<ComponentStyle.Strong>
 					Max
-					<ComponentStyle.Input type="number" name="number" id="" value={max} readOnly/>
+					<ComponentStyle.Input
+                        type="number"
+                        name="number-max"
+                        value={max}
+                        onChange={e => changeNumberMax(+e.target.value)}
+                    />
 				</ComponentStyle.Strong>
 			</span>
         </Card>
@@ -42,14 +49,22 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapActionCreatorsToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         changeNumberMin(number) {
             //action creator -> action
             const action = actionChangeNumberMin(number);
             dispatch(action);
+        },
+        changeNumberMax(number) {
+            //action creator -> action
+            const action = actionChangeNumberMax(number);
+            dispatch(action);
         }
     }
 }
 
-export default connect(mapStateToProps, mapActionCreatorsToProps)(Intervalo);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Intervalo);
