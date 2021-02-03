@@ -11,29 +11,16 @@ const card_color = {
 };
 
 const Intervalo = (props) => {
-	const { min, max, onMinChange, onMaxChange } = props;
 	return (
 		<Card title="Intervalo de Números" color={card_color.red}>
 			<span>
 				<ComponentStyle.Strong>
 					Mínimo
-					<ComponentStyle.Input
-						type="number"
-						name="number"
-						id=""
-						value={min}
-						onChange={(e) => onMinChange(+e.target.value)}
-					/>
+					<ComponentStyle.Input type="number" name="number" id="" value={1} />
 				</ComponentStyle.Strong>
 				<ComponentStyle.Strong>
 					Máximo
-					<ComponentStyle.Input
-						type="number"
-						name="number"
-						id=""
-						value={max}
-						onChange={(e) => onMaxChange(+e.target.value)}
-					/>
+					<ComponentStyle.Input type="number" name="number" id="" value={10} />
 				</ComponentStyle.Strong>
 			</span>
 		</Card>

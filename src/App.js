@@ -8,10 +8,6 @@ import Sorteio from './components/Sorteio';
 
 const App = () => {
 
-  const [min, setMin] = React.useState(1);
-  const [max, setMax] = React.useState(10);
-
-
   return (
     <AppStyle>
       <AppStyle.Title>
@@ -19,16 +15,12 @@ const App = () => {
     </AppStyle.Title>
       <AppStyle.Row>
         <Intervalo
-          min={min}
-          max={max}
-          onMinChange={setMin}
-          onMaxChange={setMax}
         />
       </AppStyle.Row>
       <AppStyle.Row>
-        <Media min={min} max={max} />
-        <Soma min={min} max={max} />
-        <Sorteio min={min} max={max} />
+        <Media />
+        <Soma />
+        <Sorteio />
       </AppStyle.Row>
     </AppStyle>
   );

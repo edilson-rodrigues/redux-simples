@@ -11,14 +11,11 @@ const card_color = {
 };
 
 const Sorteio = (props) => {
-	const { min, max } = props;
-	const aleatorio = parseInt(Math.random() * (max - min)) + min;
-
 	return (
 		<Card title="Sorteio de um Número" color={card_color.purple}>
 			<span>
 				<span>Resultado</span>
-				<ComponentStyle.Strong>{aleatorio}</ComponentStyle.Strong>
+				<ComponentStyle.Strong>{8}</ComponentStyle.Strong>
 			</span>
 		</Card>
 	);

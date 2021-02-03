@@ -11,13 +11,11 @@ const card_color = {
 };
 
 const Media = (props) => {
-	const { min, max } = props;
-
 	return (
 		<Card title="Media dos Números" color={card_color.green}>
 			<span>
 				<span>Resultado</span>
-				<ComponentStyle.Strong>{(max + min) / 2}</ComponentStyle.Strong>
+				<ComponentStyle.Strong>{10}</ComponentStyle.Strong>
 			</span>
 		</Card>
 	);
