@@ -1,6 +1,6 @@
 import React from "react";
 
-import IntervaloStyle from "./IntervaloStyle";
+import ComponentStyle from "../Style";
 import Card from "../Card";
 
 const card_color = {
@@ -13,26 +13,26 @@ const card_color = {
 const Intervalo = () => (
 	<Card title="Intervalo de Números" color={card_color.red}>
 		<span>
-			<IntervaloStyle.Strong>
+			<ComponentStyle.Strong>
 				Mínimo
-				<IntervaloStyle.Input
+				<ComponentStyle.Input
 					type="number"
 					name="number"
 					id=""
 					value={0}
 					readonly
 				/>
-			</IntervaloStyle.Strong>
-			<IntervaloStyle.Strong>
+			</ComponentStyle.Strong>
+			<ComponentStyle.Strong>
 				Máximo
-				<IntervaloStyle.Input
+				<ComponentStyle.Input
 					type="number"
 					name="number"
 					id=""
 					value={10}
 					readonly
 				/>
-			</IntervaloStyle.Strong>
+			</ComponentStyle.Strong>
 		</span>
 	</Card>
 );

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-const IntervaloStyle = styled.div`
+const ComponentStyle = styled.div`
   
 `
-IntervaloStyle.Strong = styled.strong`
- 
+ComponentStyle.Strong = styled.strong`
+ margin: 0 20px 0 20px; 
 `
 
-IntervaloStyle.Input = styled.input`
+ComponentStyle.Input = styled.input`
   font-size: 1.8rem;
   border: none;
   border-bottom: 2px solid #8eacbb;
@@ -18,4 +18,4 @@ IntervaloStyle.Input = styled.input`
   width: 100px;
 `
 
-export default IntervaloStyle;
+export default ComponentStyle;

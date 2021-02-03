@@ -1,14 +1,8 @@
-
-import Card from './components/Card/'
-import AppStyle from './AppStyle'
-import Intervalo from './components/Intervalo'
-
-const card_color = {
-  red: "red",
-  blue: "blue",
-  green: "green",
-  purple: "purple"
-}
+import AppStyle from './AppStyle';
+import Intervalo from './components/Intervalo';
+import Media from './components/Media';
+import Soma from './components/Soma';
+import Sorteio from './components/Sorteio';
 
 
 const App = () => (
@@ -20,9 +14,9 @@ const App = () => (
       <Intervalo />
     </AppStyle.Row>
     <AppStyle.Row>
-      <Card title="Card 2" color={card_color.blue}>Y</Card>
-      <Card title="Card 3" color={card_color.green}>X</Card>
-      <Card title="Card 4" color={card_color.purple}>Y</Card>
+      <Media />
+      <Soma />
+      <Sorteio />
     </AppStyle.Row>
   </AppStyle>
 );
