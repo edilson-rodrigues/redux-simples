@@ -11,6 +11,7 @@ const App = () => {
   const [min, setMin] = React.useState(1);
   const [max, setMax] = React.useState(10);
 
+
   return (
     <AppStyle>
       <AppStyle.Title>
