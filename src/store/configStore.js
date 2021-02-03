@@ -1,15 +1,15 @@
-import { createStore, combineReducers } from 'redux';
+import {combineReducers, createStore} from 'redux';
 
 const reducers = combineReducers({
-    number: function (state, action){
+    number: function (state, action) {
         console.log('state-number', state, 'action-number', action)
-        return{
-            min:1,
-            max: 10,
+        return {
+            min: 7,
+            max: 31,
         }
     },
-    names: function (state, action){
-        console.log('state-name', state, 'action-name', action)
+    names: function (state, action) {
+        // console.log('state-name', state, 'action-name', action)
         return [
             'Ana',
             'Bia',
@@ -18,7 +18,7 @@ const reducers = combineReducers({
     }
 });
 
-function configStore(){
+function configStore() {
     return createStore(reducers);
 }
 

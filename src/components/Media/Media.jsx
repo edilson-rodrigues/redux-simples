@@ -1,24 +1,36 @@
 import React from "react";
+import {connect} from "react-redux";
 
 import ComponentStyle from "../Style";
 import Card from "../Card";
 
 const card_color = {
-	red: "red",
-	blue: "blue",
-	green: "green",
-	purple: "purple",
+    red: "red",
+    blue: "blue",
+    green: "green",
+    purple: "purple",
 };
 
 const Media = (props) => {
-	return (
-		<Card title="Media dos Números" color={card_color.green}>
+    const {min, max} = props;
+
+    console.log('props-media', props);
+
+    return (
+        <Card title="Media dos Números" color={card_color.green}>
 			<span>
 				<span>Resultado</span>
-				<ComponentStyle.Strong>{10}</ComponentStyle.Strong>
+                <ComponentStyle.Strong>{(min + max) / 2}</ComponentStyle.Strong>
 			</span>
-		</Card>
-	);
+        </Card>
+    );
 };
 
-export default Media;
+const mapStateToProps = (state) => {
+    return {
+        min: state.number.min,
+        max: state.number.max,
+    }
+}
+
+export default connect(mapStateToProps)(Media);
