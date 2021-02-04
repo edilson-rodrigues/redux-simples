@@ -3,7 +3,7 @@ const initial_state = {
     max: 31,
 }
 
-export default function (state = initial_state, action) {
+const store = (state = initial_state, action) => {
     // console.log('state-number', state, 'action-number', action)
     switch (action.type) {
         case 'NUM_MIM_CHANGE' :
@@ -21,3 +21,4 @@ export default function (state = initial_state, action) {
     }
 };
 
+export default store;
