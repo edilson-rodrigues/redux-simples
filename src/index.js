@@ -4,18 +4,15 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import GlobalStyle from './GlobalStyles'
-import configStore from "./store/configStore";
-
-const store = configStore();
+import {store} from "./store/store";
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={store()}>
         <React.StrictMode>
-            <GlobalStyle />
-            <App />
+            <GlobalStyle/>
+            <App/>
         </React.StrictMode>
     </Provider>,
 
-  document.getElementById('root')
+    document.getElementById('root')
 );
-

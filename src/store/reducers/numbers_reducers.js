@@ -1,24 +1,19 @@
-const initial_state = {
+import {NUM_MAX, NUM_MIN} from "../actions/numbers_actions";
+
+const initialState = {
     min: 7,
     max: 31,
-}
+};
 
-const store = (state = initial_state, action) => {
-    // console.log('state-number', state, 'action-number', action)
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'NUM_MIM_CHANGE' :
-            return {
-                ...state,
-                min: action.payload,
-            }
-        case 'NUM_MAX_CHANGE' :
-            return {
-                ...state,
-                max: action.payload,
-            }
+        case NUM_MIN :
+            return {...state, min: action.payload}
+        case NUM_MAX :
+            return {...state, max: action.payload,}
         default :
             return state
     }
 };
 
-export default store;
+export default reducer;
