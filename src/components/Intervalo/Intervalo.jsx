@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 
 import ComponentStyle from "../Style";
 import Card from "../Card";
-import {actionChangeNumberMax, actionChangeNumberMin} from "../../store/actions/numbers";
+import {actionChangeNumberMax, actionChangeNumberMin} from "../../store/actions/numbers_actions";
 
 const card_color = {
     red: "red",
