@@ -1,30 +1,27 @@
 import React from 'react';
 import AppStyle from './AppStyle';
-import Intervalo from './components/Intervalo';
-import Media from './components/Media';
-import Soma from './components/Soma';
-import Sorteio from './components/Sorteio';
+import Intervalo from './components/interval';
+import Average from './components/Average';
+import Sum from './components/Sum';
+import Draw from './components/Draw';
 
 
-const App = () => {
-
-  return (
+const App = () => (
     <AppStyle>
-      <AppStyle.Title>
-        Exercício React-Redux (Simples)
-    </AppStyle.Title>
-      <AppStyle.Row>
-        <Intervalo
-        />
-      </AppStyle.Row>
-      <AppStyle.Row>
-        <Media />
-        <Soma />
-        <Sorteio />
-      </AppStyle.Row>
+        <AppStyle.Title>
+            Exercises React-Redux (Basic)
+        </AppStyle.Title>
+        <AppStyle.Row>
+            <Intervalo
+            />
+        </AppStyle.Row>
+        <AppStyle.Row>
+            <Average/>
+            <Sum/>
+            <Draw/>
+        </AppStyle.Row>
     </AppStyle>
-  );
-}
+);
 
 
 export default App;
